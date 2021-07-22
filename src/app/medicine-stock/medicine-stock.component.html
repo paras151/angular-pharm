@@ -1,0 +1,37 @@
+<div class="container">
+
+<div class="col-md-4">
+  <b>Custom Search Example</b>
+</div>
+<div class="form-group col-md-4">
+  <input type="text" class="form-control"  placeholder="Enter Keyword for filter result" [(ngModel)]="searchedKeyword">
+</div>
+
+<table class="table table-striped">
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Chemical Composition</th>
+          <th>Target Ailment</th>
+          <th>Date of Expiry</th>
+          <th>Quantity</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let item of filterResultDataSet | filter:searchedKeyword">
+          <td>{{item.name}}</td>
+          <td>{{item.chemicalComposition}}</td>
+          <td>{{item.targetAilment}}</td>
+          <td>{{item.doe}}</td>
+          <td>{{item.quantity}}</td>
+      </tr>
+  </tbody>
+  
+  <br>
+  <label>Choose Quantity: </label>
+  <input class="number" type="number">
+  <br>
+  <button class="button" type="submit">Submit</button>
+
+</table>
+</div>

@@ -1,0 +1,38 @@
+<div class="container">
+
+    <br>
+    <br>
+    <input type="date" id="birthday" name="birthday">
+    <br>
+    <br>
+    <button type="button" class="btn-md btn-primary">Add Appointment</button>
+
+    <div class="container">
+
+        <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th>rep Name</th>
+                  <th>Doctor name</th>
+                  <th>Treating Ailment</th>
+                  <th>Medicine</th>
+                  <th>Slot</th>
+                  <th>Date</th>
+                  <th>Doctor contact</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let item of filterResultDataSet">
+                  <td>{{item.repName}}</td>
+                  <td>{{item.doctorName}}</td>
+                  <td>{{item.targetAilment}}</td>
+                  <td>{{item.medicine}}</td>
+                  <td>{{item.slot}}</td>
+                  <td>{{item.date}}</td>
+                  <td>{{item.contact}}</td>
+              </tr>
+          </tbody>
+        
+        </table>
+        </div>
+</div>
